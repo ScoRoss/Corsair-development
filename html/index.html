@@ -1,4 +1,25 @@
-<?php include 'html/template/header.php'; ?>
-<h2>Welcome to Corsair Code Solutions</h2>
-<p>We specialize in C#, Python, and web development projects.</p>
-<?php include 'html/template/footer.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Corsair Code Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <h2>Welcome to Corsair Code Solutions</h2>
+    <p>We specialize in C#, Python, and modern web development projects.</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("header.html").then(r => r.text()).then(html => document.getElementById("header").innerHTML = html);
+      fetch("footer.html").then(r => r.text()).then(html => document.getElementById("footer").innerHTML = html);
+    });
+  </script>
+</body>
+</html>

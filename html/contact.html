@@ -1,14 +1,37 @@
-<?php include 'html/template/header.php'; ?>
-<h2>Contact</h2>
-<form method="POST" action="contact.php">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Corsair Code Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <h2>Contact Us</h2>
+    <p>If you have any questions or would like to get in touch, please fill out the form above.</p>
+    <p>We look forward to hearing from you!</p>
+  </main>
+<form action="https://usebasin.com/f/0d69eace6f6d" method="POST">
   <input type="text" name="name" placeholder="Your Name" required><br>
   <input type="email" name="email" placeholder="Your Email" required><br>
   <textarea name="message" placeholder="Your Message" required></textarea><br>
   <button type="submit">Send</button>
 </form>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  echo "<p>Message sent! (not really, this is a placeholder)</p>";
-}
-?>
-<?php include 'html/template/footer.php'; ?>
+
+
+
+  <div id="footer"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("header.html")
+        .then(r => r.text())
+        .then(html => document.getElementById("header").innerHTML = html);
+      fetch("footer.html")
+        .then(r => r.text())
+        .then(html => document.getElementById("footer").innerHTML = html);
+    });
+  </script>
+</body>
+</html>
