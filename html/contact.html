@@ -1,4 +1,4 @@
-<?php include 'template/header.php'; ?>
+<?php include 'html/template/header.php'; ?>
 <h2>Contact</h2>
 <form method="POST" action="contact.php">
   <input type="text" name="name" placeholder="Your Name" required><br>
@@ -11,4 +11,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   echo "<p>Message sent! (not really, this is a placeholder)</p>";
 }
 ?>
-<?php include 'template/footer.php'; ?>
+<?php include 'html/template/footer.php'; ?>

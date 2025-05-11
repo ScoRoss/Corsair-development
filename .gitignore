@@ -1,0 +1,17 @@
+# Ignore Docker config
+docker-compose.yml
+Dockerfile
+.docker/
+
+# Ignore VS Code dev container config
+.devcontainer/
+.vscode/
+
+# Ignore common node/python/vendor stuff just in case
+node_modules/
+vendor/
+__pycache__/
+
+# Ignore system files
+*.log
+.env
