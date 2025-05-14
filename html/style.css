@@ -155,3 +155,152 @@ form button:hover {
   border-radius: 4px;
   font-size: 0.8em;
 }
+/* HEADER & FOOTER */
+header {
+  background-color: #002855;
+  color: white;
+  padding: 1em 2em;
+}
+
+/* wrap logo + title */
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+/* logo sizing */
+.logo {
+  height: 50px;      /* adjust as needed */
+  width: auto;
+  display: block;
+}
+
+/* move the nav beneath or beside */
+header nav {
+  margin-top: 0.5em;
+}
+
+/* if you'd rather have nav to the right on desktop */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header nav {
+    margin-top: 0;
+  }
+}
+
+/* NAVIGATION */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+/* rest of your nav link styles… */
+/* HERO */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4em 2em;
+  background: linear-gradient(135deg, #002855 0%, #0056b3 100%);
+  color: #fff;
+}
+.hero-content {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+.hero-graphic {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.hero-graphic img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.btn-primary {
+  background-color: #e10600;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #c00400;
+}
+.btn-outline {
+  border: 2px solid #e10600;
+  color: #e10600;
+}
+.btn-outline:hover {
+  background-color: #e10600;
+  color: #fff;
+}
+
+/* FEATURES GRID */
+.features {
+  padding: 4em 2em;
+  text-align: center;
+}
+.feature-grid {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 2em;
+}
+.feature-card {
+  padding: 1.5em;
+  border-radius: 8px;
+  background-color: #070708;
+  box-shadow: 0 2px 8px rgba(247, 246, 246, 0.05);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 4em 2em;
+  background-color: #0c0c0c;
+  text-align: center;
+}
+.testimonials blockquote {
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+}
+.testimonials footer {
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+/* CTA FOOTER */
+.cta-footer {
+  padding: 4em 2em;
+  background: #002855;
+  color: #fff;
+  text-align: center;
+}
+.cta-footer h2 {
+  margin-bottom: 0.5em;
+}
